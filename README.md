@@ -1,180 +1,45 @@
+# SpendWise - Week 6
 
-# SpendWise - JavaScript Foundation
+## Project Description
 
-SpendWise is a simple budget and expense tracking application built using HTML, CSS, and JavaScript.
+SpendWise is a personal budgeting application that helps users record, manage, and monitor their daily expenses. This week's update makes the application interactive using JavaScript.
 
-The project demonstrates fundamental JavaScript concepts including variables, data types, user input, calculations, functions, and displaying results in the browser console.
+## Improvements Made
 
-## Project Purpose
+The following improvements were made to SpendWise:
 
-The purpose of SpendWise is to help users calculate their remaining budget after entering their total budget and expenses.
+* Added an interactive expense form.
+* Added the ability to add expenses.
+* Added the ability to delete individual expenses.
+* Added a button to clear all expenses.
+* Added automatic calculation of total spending.
+* Added automatic calculation of the remaining budget.
+* Added budget status feedback.
+* Added dynamic display of expense records.
+* Added responsive interaction between the user interface and JavaScript.
 
-The application uses JavaScript to collect information from the user, perform calculations, and display the results.
+## Conditionals
 
-## Technologies Used
+Conditional statements are used to evaluate the user's spending. SpendWise checks whether the user is within the budget, close to the budget limit, or over the budget.
 
-- HTML5
-- CSS3
-- JavaScript
+## Arrays
 
-## JavaScript Concepts Implemented
+An array is used to store multiple expense records. Each expense is stored as an object containing the expense name, category, and amount.
 
-### 1. Variables
+## Loops
 
-The application uses variables to store important budgeting information.
+Loops are used to process the expense array. The application uses a loop to calculate the total amount spent and another loop to display the expense records on the webpage.
 
+## DOM Manipulation
 
-let budget = 0;
-let expenses = 0;
-let remainingBalance = 0;
+The DOM is updated dynamically using JavaScript. The application changes the total spent, remaining budget, budget status, and expense list directly on the webpage.
 
+## Events
 
-The `budget` variable stores the user's total budget.
+Event listeners are used to respond to user actions. The expense form listens for submit events, while the clear button listens for click events.
 
-The `expenses` variable stores the user's total expenses.
+## Challenges and Solutions
 
-The `remainingBalance` variable stores the amount remaining after expenses have been deducted from the budget.
+One challenge was connecting the expense data to the dashboard dynamically. This was solved by storing expenses in an array and creating functions that calculate totals and update the DOM whenever the data changes.
 
-### 2. User Input
-
-SpendWise collects information from the user using JavaScript's `prompt()` function.
-
-
-let budgetInput = prompt("Enter your monthly budget in KES:");
-```
-
-The user is asked to enter their monthly budget and total expenses.
-
-Since values collected using `prompt()` are strings, they are converted into numbers using `Number()`.
-
-
-budget = Number(budgetInput);
-expenses = Number(expensesInput);
-
-
-### 3. Calculations
-
-SpendWise calculates the remaining balance by subtracting expenses from the budget.
-
-remainingBalance = calculateBalance(budget, expenses);
-
-The calculation is:
-
-Remaining Balance = Budget - Expenses
-
-For example
-Budget = KES 50,000
-Expenses = KES 15,000
-
-Remaining Balance = 50,000 - 15,000
-Remaining Balance = KES 35,000
-
-
-### 4. Functions
-
-Functions are used to organize the JavaScript code and make the application easier to manage.
-
-The main budget calculation function is:
-
-
-function calculateBalance(budget, expenses) {
-    return budget - expenses;
-}
-
-This function receives the budget and expenses as parameters and returns the remaining balance.
-
-The project also uses a function called `formatCurrency()` to format amounts as Kenyan Shillings.
-
-function formatCurrency(amount) {
-    return "KES " + amount.toLocaleString();
-}
-
-The `startSpendWise()` function controls the main application process.
-
-It:
-
-1. Collects the user's budget.
-2. Collects the user's expenses.
-3. Converts the input into numbers.
-4. Validates the input.
-5. Calculates the remaining balance.
-6. Displays the results.
-
-### 5. Console Output
-
-The calculated results are displayed in the browser console.
-
-Example:
-
-========== SpendWise ==========
-Monthly Budget: KES 50,000
-Total Expenses: KES 15,000
-Remaining Balance: KES 35,000
-===============================
-```
-
-To view the console:
-
-1. Open the SpendWise webpage.
-2. Right-click anywhere on the page.
-3. Select "Inspect".
-4. Open the "Console" tab.
-
-## How to Run the Project
-
-1. Download or clone this repository.
-2. Open the project folder.
-3. Open `index.html` in a web browser.
-4. Click the "Start Budget Calculation" button.
-5. Enter your monthly budget.
-6. Enter your total expenses.
-7. View the calculated results on the webpage.
-8. Open the browser console to see the clearly labelled JavaScript output.
-
-## Example
-
-If the user enters:
-
-```text
-Monthly Budget: 50000
-Total Expenses: 15000
-```
-
-SpendWise calculates:
-
-```text
-Remaining Balance: 35000
-```
-
-## Project Files
-
-```text
-SpendWise/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
-## Learning Outcome
-
-This project demonstrates how JavaScript can be used to add functionality and interactivity to a webpage.
-
-The application demonstrates:
-
-* JavaScript variables
-* Numbers and strings
-* User input
-* Type conversion
-* Arithmetic calculations
-* Functions
-* Function parameters
-* Return values
-* Conditional validation
-* Browser console output
-* DOM manipulation
-* Event listeners
-
-
-
+Another challenge was preventing invalid expense information from being submitted. Conditional statements were used to validate the user's input before adding an expense to the array.
